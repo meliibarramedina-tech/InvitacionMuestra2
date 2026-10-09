@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#201612">
+  <meta name="description" content="Invitación de boda elegante y formal con estilo romántico y sofisticado.">
+  <title>Ariana & Mateo | Boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80" alt="Pareja elegante durante una sesión de boda" width="1400" height="1600" fetchpriority="high" decoding="async">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Te invitamos a celebrar</p>
+        <h1 id="hero-title">Ariana <span>&</span> Mateo</h1>
+        <p class="hero-date" id="hero-date">16 · 06 · 2027</p>
+        <p class="hero-subtitle">Nuestra boda será el 16 de junio a las 7:00 pm</p>
+
+        <div class="music-player" aria-label="Reproductor de música">
+          <p class="music-prompt">NUESTRA CANCIÓN:</p>
+          <div class="music-controls">
+            <button class="play-button" id="play-toggle" type="button" aria-label="Reproducir canción">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+            <input id="music-progress" type="range" min="0" max="100" value="0" aria-label="Posición de la canción">
+          </div>
+          <span class="sr-only" id="current-time">0:00</span>
+          <span class="sr-only" id="duration">0:30</span>
+          <span class="sr-only" id="music-note" aria-live="polite">Toca para escuchar la canción</span>
+          <audio id="song" preload="metadata" src="audio/ScreenRecording_10-03-2026%2019-09-29_1%20%28audio-extractor.net%29.mp4"></audio>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#invitacion" aria-label="Conoce los detalles de la invitación"><span></span></a>
+    </section>
+
+    <section class="welcome section-pad" id="invitacion">
+      <div class="welcome-copy reveal">
+        <p class="eyebrow blue-eyebrow">Nuestra historia</p>
+        <h2>Con amor<br>celebraremos<br>este nuevo comienzo.</h2>
+        <p>En un día lleno de luz, promesas y alegría, queremos compartir contigo la unión que empezamos juntos y la felicidad que nos rodea al caminar de la mano.</p>
+      </div>
+      <figure class="welcome-photo reveal">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80" alt="Pareja con estilo romántico en boda" width="1200" height="1400" loading="lazy" decoding="async">
+      </figure>
+    </section>
+
+    <section class="date-section">
+      <img class="date-photo" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1400&q=80" alt="Decoración elegante de boda con flores" width="1400" height="1400" loading="lazy" decoding="async">
+      <div class="date-overlay"></div>
+      <div class="date-content reveal">
+        <p class="eyebrow">Ceremonia</p>
+        <h2>Nos casamos<br><em>el 16 de junio.</em></h2>
+        <div class="date-details">
+          <div><span class="detail-label">DÍA</span><strong>Sábado</strong></div>
+          <div><span class="detail-label">FECHA</span><strong id="party-date-label">16 de junio del 2027</strong></div>
+          <div><span class="detail-label">HORA</span><strong>7:00 de la noche</strong></div>
+        </div>
+        <div class="countdown" aria-label="Cuenta regresiva para la boda">
+          <div><strong id="days">--</strong><span>días</span></div>
+          <div><strong id="hours">--</strong><span>horas</span></div>
+          <div><strong id="minutes">--</strong><span>minutos</span></div>
+          <div><strong id="seconds">--</strong><span>segundos</span></div>
+        </div>
+      </div>
+      <span class="photo-index">A · M</span>
+    </section>
+
+    <section class="family section-pad">
+      <figure class="family-photo reveal">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1000&q=80" alt="Detalle elegante de boda con flores y arreglos" width="1200" height="1400" loading="lazy" decoding="async">
+      </figure>
+      <div class="family-copy reveal">
+        <p class="eyebrow blue-eyebrow">Con la bendición</p>
+        <h2>De nuestras familias</h2>
+        <div class="names-group">
+          <span class="detail-label">NUESTROS PADRES</span>
+          <p>María y Carlos</p>
+        </div>
+        <div class="names-group">
+          <span class="detail-label">NUESTROS PADRINOS</span>
+          <p>Valeria y Andrés</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="place section-pad">
+      <div class="place-copy reveal">
+        <p class="eyebrow blue-eyebrow">Recepción</p>
+        <h2>La celebración será en <em>Villa Luna.</em></h2>
+        <p>Jardín de eventos<br>Guadalajara, Jalisco</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Villa+Luna+Guadalajara+Jalisco" target="_blank" rel="noopener noreferrer">
+          <span class="map-pin" aria-hidden="true"></span>Abrir en Google Maps
+          <span class="link-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="map-frame reveal">
+        <iframe title="Mapa del lugar de la boda" src="https://maps.google.com/maps?q=Guadalajara%20Jalisco&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <figure class="place-photo reveal">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1400&q=80" alt="Arreglo floral formal para una boda" width="1400" height="900" loading="lazy" decoding="async">
+      </figure>
+    </section>
+
+    <section class="rsvp">
+      <img class="rsvp-photo" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80" alt="Pareja en una boda con estilo formal" width="1400" height="1600" loading="lazy" decoding="async">
+      <div class="rsvp-shade"></div>
+      <div class="rsvp-content reveal">
+        <p class="eyebrow">Confirmación</p>
+        <h2>Tu presencia hará nuestro día perfecto</h2>
+        <p class="rsvp-deadline">Por favor confirma tu asistencia antes del<br><strong id="rsvp-deadline-date">10 de junio de 2027</strong></p>
+        <a class="whatsapp-button" href="https://wa.me/524779087420?text=Hola%2C%20Ariana%20y%20Mateo.%20Confirmo%20mi%20asistencia%20a%20su%20boda." target="_blank" rel="noopener noreferrer">
+          ¡Escríbenos para confirmar!
+        </a>
+      </div>
+    </section>
+
+    <footer class="closing">
+      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80" alt="Arreglo floral elegante y bodas" width="1400" height="1400" loading="lazy" decoding="async">
+      <div class="closing-overlay"></div>
+      <p>Con todo nuestro amor,<br>Ariana & Mateo</p>
+    </footer>
+  </main>
+</body>
+</html>
